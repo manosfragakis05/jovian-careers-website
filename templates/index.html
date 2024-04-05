@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="container">
-        <h1>Jovian Careers</h1>
+        <h1>{{company_name}} Careers</h1>
         <img id="banner" src="static/dosmtgreat.jpg" width="1000">
         <h2>About Jovian</h2>
         <p>
@@ -18,10 +18,16 @@
             asperiores quas placeat officiis cupiditate et voluptates harum animi.
             Qui odio voluptatibus delectus expedita aperiam iusto pariatur?
         </p>
+
         <h2>Open Positions</h2>
-        <p>
-            {%jobs%}
-        </p>
+
+        <div>
+            {%  for job in jobs %}
+                <h4>{{job["title"]}}</h4>
+                <div>{{job["location"]}}</div>
+            {% endfor %}
+        </div>
+
         <div style="text-align: center;">
             <button id="contactbutton">Contact Us</button>
             <p>Copyright 2024 - Manos</p>

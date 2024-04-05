@@ -2,37 +2,38 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-JOBS = [{
+JOBS = [
+    {
         "id" : 1,
         "title" : "Data Analyst",
-        "locatiion" : "Lamia, Greece",
+        "location" : "Lamia, Greece",
         "salary" : "EU. 1.000",
-    }
+    },
     {
         "id" : 2,
         "title" : "Data Scientist",
-        "locatiion" : "Athens, Greece",
+        "location" : "Athens, Greece",
         "salary" : "EU. 1.200",
-    }
+    },
     {
         "id" : 3,
         "title" : "Frontend Engeneer",
-        "locatiion" : "Remote",
+        "location" : "Remote",
         "salary" : "EU. 900",
-    }
+    },
     {
         "id" : 4,
         "title" : "Backend Engeneer",
-        "locatiion" : "Xania, Greece",
+        "location" : "Xania, Greece",
         "salary" : "EU. 1.300",
     }
 ]
-    
 
+    
 
 @app.route("/")
 def hello():
-    return render_template("index.html", jobs = JOBS)
+    return render_template("index.html", jobs = JOBS, company_name = 'Jovian')
 
 if __name__ == "__main__":
     app.run(debug=True)
