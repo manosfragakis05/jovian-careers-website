@@ -38,6 +38,15 @@ p{
     font-size: 18px;
     font-family: Roboto;
 }
-#positions:button{
+.positionsbtn{
     font-size: 20px;
+    position: relative;
+    left: 900px;
+    bottom: 35px;
+    border-radius: 5px;
+    color: rgb(109, 109, 255);
+}
+.positionsbtn:hover{
+    color: white;
+    background-color: rgb(109, 109, 255);
 }
