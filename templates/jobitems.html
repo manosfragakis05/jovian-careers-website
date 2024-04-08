@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="static/style.css">
+
+<h2>Open Positions</h2>
+
+<div id="positions">
+    {%  for job in jobs %}
+        <h3 style="color:rgb(120, 120, 120);margin: 30px 0px 5px;">{{job["title"]}}</h3>
+        <div><b>Location : </b>{{job["location"]}}</div>
+        <div style="border-bottom: 1px solid;"><b>Salary : </b>{{job["salary"]}}</div>
+        <button type="button" class="btn btn-outline-primary">Apply</button>
+    {% endfor %}
+</div>

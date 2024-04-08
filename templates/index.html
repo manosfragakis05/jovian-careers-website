@@ -9,8 +9,11 @@
 <body>
     <div id="container">
         <h1>{{company_name}} Careers</h1>
+
         <img id="banner" src="static/dosmtgreat.jpg" width="1000">
+
         <h2>About Jovian</h2>
+
         <p>
             Lorem ipsum dolor sit,
             amet consectetur adipisicing elit.
@@ -19,14 +22,7 @@
             Qui odio voluptatibus delectus expedita aperiam iusto pariatur?
         </p>
 
-        <h2>Open Positions</h2>
-
-        <div>
-            {%  for job in jobs %}
-                <h4>{{job["title"]}}</h4>
-                <div>{{job["location"]}}</div>
-            {% endfor %}
-        </div>
+        {% include "jobitems.html" %}
 
         <div style="text-align: center;">
             <button id="contactbutton">Contact Us</button>
